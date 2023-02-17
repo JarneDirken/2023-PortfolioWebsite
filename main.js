@@ -3,7 +3,19 @@ document.addEventListener('DOMContentLoaded', function() {
   const navLinks = document.querySelectorAll('.navlist a');
   const sections = document.querySelectorAll('.section');
   const btns = document.querySelectorAll('.btn');
-  const header = document.querySelector('header')
+  const header = document.querySelector('header');
+  let menu = document.querySelector('#menu-icon');
+  let navList = document.querySelector('.navlist');
+
+  menu.onclick = () => {
+    menu.classList.toggle('bx-x');
+    navList.classList.toggle('open');
+  };
+
+  window.onscroll = () => {
+    menu.classList.remove('bx-x');
+    navList.classList.remove('open');
+  };
 
   window.addEventListener('scroll', () => {
     let current = '';
