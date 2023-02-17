@@ -1,7 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
+  //variables
   const navLinks = document.querySelectorAll('.navlist a');
   const sections = document.querySelectorAll('.section');
   const btns = document.querySelectorAll('.btn');
+  const header = document.querySelector('header')
 
   window.addEventListener('scroll', () => {
     let current = '';
@@ -11,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
       if (pageYOffset >= sectionTop - sectionHeight / 3) {
         current = section.getAttribute('id');
       }
+      header.classList.toggle("sticky", window.scrollY > 100);
     });
 
     navLinks.forEach(link => {
