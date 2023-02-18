@@ -54,10 +54,11 @@
       <div class="about-text">
         <h2>About <span>Me</span></h2>
         <h4>Student Thomas <span>More</span></h4>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim nulla excepturi pariatur neque aliquam
-          delectus omnis quis nihil corrupti. Neque error numquam corrupti atque minus asperiores consequuntur iusto
-          incidunt architecto.</p>
-        <a href="#" class="btn">More About</a>
+        <p>My name is Dirken <span>Jarne</span>, a 19 year old student at Thomas More. I live in Ravels With my parents and two
+          little sisters. I love going to the gym, cooking meals and programming. Since my passion is <span>programming</span>, I
+          chose to study <span>Applied Computer Science</span> at Thomas More in Geel. If you are interested in all my skills and
+          abilities, take a look at my resume!</p>
+        <a href="/assets/resume/minorities.pdf" target="_blank" class="btn">Download Resume</a>
       </div>
     </div>
     <!--services-->
@@ -110,7 +111,8 @@
           <div class="layer">
             <h5>Web Development</h5>
             <p>Last year for the final project my team and I made an awesome website about programming languages.</p>
-            <a href="https://hg1-webdesign-eindproject-eztyping.netlify.app/" target="_blank"><i class="bx bx-link-external"></i></a>
+            <a href="https://hg1-webdesign-eindproject-eztyping.netlify.app/" target="_blank"><i
+                class="bx bx-link-external"></i></a>
           </div>
         </div>
 
@@ -118,8 +120,10 @@
           <img src="assets/images/project2.jpg" alt="Second Project">
           <div class="layer">
             <h5>Reply Cyber Security Challenge</h5>
-            <p>My team and I participated in the RCS challenge. We didn't get a spot on the podium but it was a great experience.</p>
-            <a href="https://challenges.reply.com/tamtamy/challenge/reply-cybersecurity-challenge-2022/stats" target="_blank"><i class="bx bx-link-external"></i></a>
+            <p>My team and I participated in the RCS challenge. We didn't get a spot on the podium but it was a great
+              experience.</p>
+            <a href="https://challenges.reply.com/tamtamy/challenge/reply-cybersecurity-challenge-2022/stats"
+              target="_blank"><i class="bx bx-link-external"></i></a>
           </div>
         </div>
 
@@ -141,14 +145,14 @@
           </div>
         </div>
 
-        <div class="row">
+        <!-- <div class="row">
           <img src="" alt="Fifth Project">
           <div class="layer">
             <h5>Game Development</h5>
             <p>Check game development things</p>
             <a href="#" target="_blank"><i class="bx bx-link-external"></i></a>
           </div>
-        </div>
+        </div> -->
 
       </div>
     </div>
@@ -167,17 +171,18 @@
         </div>
         <div class="contact-icons">
           <a href="https://github.com/JarneDirken" target="_blank"><i class='bx bxl-github'></i></a>
-          <a href="https://www.linkedin.com/in/jarne-dirken-a37141252/" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
+          <a href="https://www.linkedin.com/in/jarne-dirken-a37141252/" target="_blank"><i
+              class='bx bxl-linkedin-square'></i></a>
           <a href="https://twitter.com/jarne_dirken" target="_blank"><i class='bx bxl-twitter'></i></a>
         </div>
       </div>
       <div class="contact-form">
-        <form action="">
-          <input type="text" placeholder="Your name" required>
-          <input type="email" placeholder="Your email" required>
-          <input type="number" placeholder="Your tel" required>
-          <textarea name="text_area" cols="35" rows="10" placeholder="How Can I Help You" required></textarea>
-          <input type="submit" value="Send Message" class="submit">
+        <form onsubmit="sendEmail(); reset(); return false;">
+          <input type="text" id="name" placeholder="Your name" required>
+          <input type="email" id="email" placeholder="Your email" required>
+          <input type="number" id="number" placeholder="Your tel" required>
+          <textarea name="text_area" id="description" cols="35" rows="10" placeholder="How Can I Help You" required></textarea>
+          <input type="submit" id="btn" value="Send Message" class="submit">
         </form>
       </div>
     </div>
@@ -194,6 +199,7 @@
     </div>
   </footer>
   <!--Custom js-->
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
   <script src="main.js"></script>
 </body>
 
