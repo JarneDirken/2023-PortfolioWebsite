@@ -6,26 +6,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const header = document.querySelector('header');
   let menu = document.querySelector('#menu-icon');
   let navList = document.querySelector('.navlist');
-  var btn = document.getElementById('btn');
-
-  btn.onclick = () => {
-    e.preventDefault();
-    var name = document.getElementById('name').value;
-    var number = document.getElementById('number').value;
-    var email = document.getElementById('email').value;
-    var descrption = document.getElementById('description').value;
-    var body = 'Name: ' +name +'<br/>'+'Email: ' + email+'<br/>'+'Number: ' + number+'<br/>'+'Descrption: ' + descrption;
-
-        Email.send({
-          SecureToken : "30bef5d6-88ef-47aa-b5cc-6eb4a82d56aa",
-          To : 'bullshifirstclass@gmail.com',
-          From : email,
-          Subject : "A new form has been submitted!",
-          Body : body
-      }).then(
-        message => alert(message)
-      );
-  };
 
   menu.onclick = () => {
     menu.classList.toggle('bx-x');

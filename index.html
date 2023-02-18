@@ -58,7 +58,7 @@
           little sisters. I love going to the gym, cooking meals and programming. Since my passion is <span>programming</span>, I
           chose to study <span>Applied Computer Science</span> at Thomas More in Geel. If you are interested in all my skills and
           abilities, take a look at my resume!</p>
-        <a href="/assets/resume/minorities.pdf" target="_blank" class="btn">Download Resume</a>
+        <a href="/assets/resume/CV_Dirken_Jarne.pdf" target="_blank" class="btn">Download Resume</a>
       </div>
     </div>
     <!--services-->
@@ -128,7 +128,8 @@
         </div>
 
         <div class="row">
-          <img src="assets/images/project3.jpg" alt="Third Project">
+          <img src="assets/images/project3.jpg" alt="Third Project" class="imgproject">
+          <!-- <div class="bg">suckyamom</div> -->
           <div class="layer">
             <h5>Game Development</h5>
             <p>My best Unity game yet.</p>
@@ -166,7 +167,7 @@
           <ul>
             <li><a href="tel:0468227300">+32468227300</a></li>
             <li><a href="mailto: jarnedirken@gmail.com">jarnedirken@gmail.com</a></li>
-            <li><a href="/assets/resume/minorities.pdf" target="_blank">Download Resume</a></li>
+            <li><a href="/assets/resume/CV_Dirken_Jarne.pdf" target="_blank">Download Resume</a></li>
           </ul>
         </div>
         <div class="contact-icons">
@@ -177,12 +178,13 @@
         </div>
       </div>
       <div class="contact-form">
-        <form method="post">
-          <input type="text" id="name" placeholder="Your name" required>
-          <input type="email" id="email" placeholder="Your email" required>
-          <input type="number" id="number" placeholder="Your tel" required>
-          <textarea name="text_area" id="description" cols="35" rows="10" placeholder="How Can I Help You" required></textarea>
+        <form action="https://formsubmit.co/48367e3fb3339792b9fee914b647b88b" method="POST">
+          <input type="text" id="name" name="name" placeholder="Your name" required>
+          <input type="email" id="email" name="email" placeholder="Your email" required>
+          <input type="number" id="number" name="number" placeholder="Your tel" required>
+          <textarea name="text_area" id="description" name="description" cols="35" rows="10" placeholder="How Can I Help You" required></textarea>
           <input type="submit" id="btn" value="Send Message" class="submit">
+          <input type="hidden" name="_subject" value="New submission!">
         </form>
       </div>
     </div>
@@ -199,7 +201,6 @@
     </div>
   </footer>
   <!--Custom js-->
-  <script src="https://smtpjs.com/v3/smtp.js"></script>
   <script src="main.js"></script>
 </body>
 
