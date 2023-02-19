@@ -82,7 +82,7 @@ header{
   position: relative;
   height:100vh;
   width: 100%;
-  background-image: url(/assets/images/yallah.jpg);
+  background-image: url(/assets/images/background.jpg);
   background-size: cover;
   background-position: center;
   display: flex;
@@ -238,7 +238,7 @@ header.sticky{
   margin-bottom: 4rem;
 }
 
-.services{
+.interests{
   background: var(--second-bg-color);
 }
 
@@ -257,7 +257,7 @@ header.sticky{
   line-height: 1;
 }
 
-.service-content{
+.interests-content{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, auto));
   align-items: center;
@@ -316,10 +316,14 @@ header.sticky{
 
 .portfolio-content{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+  grid-template-columns: repeat(2,1fr);
   align-items: center;
   gap: 2.5rem;
   margin-top: 5rem;
+}
+
+.darker{
+  filter: brightness(0.3); /* adjust the value to make the image darker or lighter */
 }
 
 .row{
@@ -328,6 +332,48 @@ header.sticky{
   border-radius: 8px;
   cursor: pointer;
   max-height: 400px;
+  perspective: 1000px; /* Set perspective for 3D transform */
+}
+
+.front, .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Hide backface of card during animation */
+  transition: transform 0.6s ease-in-out; /* Set transition for transform property */
+}
+
+.front {
+  transform: rotateY(0deg);
+  z-index: 2;
+  position: relative; /* Add position: relative */
+}
+
+.back {
+  transform: rotateY(180deg); /* Flip back card 180 degrees */
+  background-color: var(--second-bg-color); /* Set background color for back card */
+  padding: 20px; /* Add padding to back card */
+}
+
+.row.flipped .front {
+  transform: rotateY(180deg); /* Flip front card 180 degrees */
+}
+
+.row.flipped .back {
+  transform: rotateY(0deg); /* Flip back card back to original position */
+}
+
+.more-info-link {
+  display: block;
+  margin-top: 10px;
+}
+
+/* Set hover effect for more info link */
+.more-info-link:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .row img{
@@ -355,14 +401,14 @@ header.sticky{
   transition: height 0.5s;
 }
 
-.row:hover img{
+.row:not(.flipped):hover img {
   transform: scale(1.1);
 }
 
 .layer{
   width: 100%;
   height: 0;
-  background: linear-gradient(rgba(0,0,0,0.1), #ff4c0588);
+  background: linear-gradient(rgba(0,0,0,0.1), #ce3e0688);
   position: absolute;
   border-radius: 8px;
   left: 0;
@@ -377,19 +423,36 @@ header.sticky{
   transition: height 0.5s;
 }
 
-.layer h5{
+.layerback{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 8px;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 40px;
+  transition: height 0.5s;
+}
+
+.layer h5, .layerback h5{
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 15px;
 }
 
-.layer p{
+.layer p, .layerback p{
   color: var(--second-text-color);
   line-height: 1.8;
   font-size: 1rem;
 }
 
-.layer i{
+.layer i, .layerback i{
   color: var(--main-color);
   margin-top: 20px;
   font-size: 20px;
@@ -400,6 +463,18 @@ header.sticky{
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+}
+
+.layer a, .layerback a {
+  text-decoration: none !important;
+}
+
+.layerback a {
+  display: inline-block !important;
+}
+
+.layerback a:first-child {
+  margin-right: 10px;
 }
 
 .row:hover .layer{
@@ -559,6 +634,9 @@ footer{
   .home{
     height: 87vh;
   }
+  .portfolio-content{
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 920px){
@@ -612,4 +690,8 @@ footer{
   .navlist.open{
     top: 100%;
   }
+}
+
+@media (max-width: 540px){
+  
 }

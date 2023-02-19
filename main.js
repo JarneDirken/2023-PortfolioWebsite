@@ -6,6 +6,15 @@ document.addEventListener('DOMContentLoaded', function () {
   const header = document.querySelector('header');
   let menu = document.querySelector('#menu-icon');
   let navList = document.querySelector('.navlist');
+  const moreInfoLinks = document.querySelectorAll('.more-info-link');
+
+  moreInfoLinks.forEach(link => {
+    link.addEventListener('click', event => {
+      event.preventDefault(); // Prevent default anchor tag behavior
+      const card = event.target.closest('.row');
+      card.classList.toggle('flipped');
+    });
+  });
 
   menu.onclick = () => {
     menu.classList.toggle('bx-x');
