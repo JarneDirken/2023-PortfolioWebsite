@@ -8,6 +8,8 @@ document.addEventListener('DOMContentLoaded', function () {
   let navList = document.querySelector('.navlist');
   const moreInfoLinks = document.querySelectorAll('.more-info-link');
 
+  document.getElementById("automaticyear").innerHTML = new Date().getFullYear();
+
   moreInfoLinks.forEach(link => {
     link.addEventListener('click', event => {
       event.preventDefault(); // Prevent default anchor tag behavior

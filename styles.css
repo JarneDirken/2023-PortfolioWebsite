@@ -82,33 +82,13 @@ header{
   position: relative;
   height:100vh;
   width: 100%;
-  background-image: url(/assets/images/background.jpg);
+  background-image: url(/assets/images/background.avif);
   background-size: cover;
   background-position: center;
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
-
-/* .home::before{
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.8));
-}
-
-.home::after{
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.2));
-} */
 
 .slide{
   margin-bottom: 10px;
@@ -693,5 +673,46 @@ footer{
 }
 
 @media (max-width: 540px){
-  
+  .layer h5{
+    font-size:15px;
+  }
+  .layer p, .layerback p{
+    font-size:15px;
+  }
+  .layer a i{
+    width: 50px;
+    height: 50px;
+    font-size: 30;
+  }
+}
+
+@media (max-width: 470px){
+  .layerback h5{
+    font-size:15px;
+  }
+  .layerback p, .layer p{
+    font-size:12px;
+  }
+  .layerback a i{
+    width: 30px;
+    height: 30px;
+    font-size: 15;
+  }
+}
+
+@media (max-width: 470px){
+  .layer h5{
+    font-size:14px;
+  }
+  .layerback p, .layer p{
+    font-size:12px;
+  }
+  .layerback p{
+    font-size:12px;
+  }
+  .layer a i, .layerback a i{
+    width: 30px;
+    height: 30px;
+    font-size: 20;
+  }
 }
