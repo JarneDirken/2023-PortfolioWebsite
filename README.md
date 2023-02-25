@@ -38,4 +38,4 @@ This project is **free to use** and does not contains any license.
 
 ### Inspired by:
 
-This project was **inspired** by: [codewithsadee](https://github.com/codewithsadee).
+This README.md file was **inspired** by: [codewithsadee](https://github.com/codewithsadee).
