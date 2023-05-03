@@ -136,6 +136,11 @@ header{
   align-items: center;
 }
 
+a:hover {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
 .btn{
   display: inline-block;
   padding: 12px 28px;
@@ -145,10 +150,12 @@ header{
   font-size: 1rem;
   font-weight: 600;
   transition: all .45s ease;
+  text-decoration: none;
 }
 
 .btn:hover{
   transform: scale(0.9);
+  text-decoration: none;
 }
 
 .btn2{
