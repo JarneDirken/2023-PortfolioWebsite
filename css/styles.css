@@ -29,6 +29,11 @@ body{
   color: var(--text-color)
 }
 
+a:hover {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
 header{
   position: fixed;
   width: 100%;
@@ -134,11 +139,6 @@ header{
 .button{
   display: inline-flex;
   align-items: center;
-}
-
-a:hover {
-  text-decoration: none;
-  color: var(--text-color);
 }
 
 .btn{
