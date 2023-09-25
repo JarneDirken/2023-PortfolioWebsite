@@ -439,7 +439,8 @@
         </div>
       </div>
       <div class="contact-form">
-        <form method="POST" netlify>
+        <form method="POST" data-netlify="true" onSubmit="submit" data-netlify-honeypot="bot-field">
+          <input name="bot-field" style="display: none; visibility: hidden;">
           <input type="text" id="name" name="name" placeholder="Your name" required>
           <input type="email" id="email" name="email" placeholder="Your email" required>
           <input type="number" id="number" name="number" placeholder="Your telephone number" pattern="[0-9]{10}"
@@ -447,9 +448,6 @@
           <textarea name="text_area" id="description" cols="35" rows="10" placeholder="How Can I Help You"
             required></textarea>
           <input type="submit" id="btn" value="Send Message" class="submit">
-          <input type="hidden" name="_subject" value="New submission!">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_template" value="box">
         </form>
       </div>
     </div>
